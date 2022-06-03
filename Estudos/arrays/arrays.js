@@ -47,13 +47,9 @@ console.log();
 console.log();
 
 
-// Métodos
+// Métodos ====================================================================================
 
-//map, push, pop, unshift, shift, sort, reverse, indexOf, slice, concat, join, toString
-
-//.map() - utilizado quando queremos fazer modificações nos elementos do array. 
-
-
+//, push, pop, unshift, shift, sort, reverse, indexOf, slice, concat, join, toString
 
 // push - adiciona um ou mais elementos ao final de um array e retorna o novo comprimento desse array
 
@@ -68,6 +64,93 @@ let nums2 = [4, 5, 6];
 Array.prototype.push.apply(nums, nums2);
 
 console.log(nums);
+console.log();
+
+// .pop() - remove o ultimo elemento de um array e retorna aquele elemento. 
+
+let arr = ['preciso', 'descansar'];
+console.log("ultimo elemento do array: " + arr.pop());
+console.log("array original apos usar o metodo pop: " + arr);
+console.log();
+//arr.push('descansar');
 
 
-///////
+// unshift - esse metodo adiciona um ou mais elementos no inicio de um array e retorna esse numero de elementos (propriedade length) atualizado.
+
+arr.unshift('eu');
+console.log(arr);
+arr.unshift(['euuu', 'sim, ']);
+console.log(arr);
+
+// shift - o metodo shift() remove o primeiro elemento de um array e retorna esse elemento, muda o tamano (length) do array. 
+
+arr.shift();
+console.log(arr);
+console.log();
+
+// sort(); - o metodo sort ordena os elementos do proprio array e retonra o array. A ordenação não é necessariamente estavél. A ordenação padrao é de acordo com a pontuação de código unicode. 
+
+// sintaxe - arr.sort([funcaoDeComparacao]); 
+// paramentros - funcaoDeComparacao: especifica uma função que define a ordenação. Se omitido, o array é ordenado de acordo com a pontuação unicode de cada um dos caracteres, de acordo com a conversão de cada elemento para string.
+let letras = ['d', 'c', 'a', 'b'];
+let numeros = [3, 5, 1, 2, 4];
+
+letras.sort();
+numeros.sort();
+
+console.log(letras, numeros);
+console.log();
+
+// .reverse(); - o metodo reverse inverte os elementos de um array, o primeiro item se torna o ultimo e o ultimo se torna o primeiro. 
+
+let arr2 = ['primeiro', 'segundo', 'terceiro', 'quarto']; 
+
+arr2.reverse();
+console.log(arr2);
+
+// .indeOf() - retorna o primeiro indice em que o elemento passado como parametro pode ser encontrado, retorna -1 caso o mesmo nao esteja presente 
+
+console.log(numeros.indexOf(1));
+
+// slice() - retorna uma cópia de parte de um array a partir de um subarray criado entre as posições de inicio e fim (fim nao é necessario) de um array. O array original náo é modificado.
+
+// Parametros:
+    // inicio - indice baseado em zero no qual se inicia a extração.
+
+let pares = [2, 4, 6, 8, 10, 12, 14, 16, 18, 19]; 
+
+let corte = pares.slice(1,4); // extrai do segundo até o quarto elemento
+console.log(corte);
+
+corte = pares.slice(4, 8); // 10 ate 18
+console.log(pares);
+
+console.log();
+
+
+// .concat() - retorna um novo array contendo todos os arrays ou valores passados como parametros. 
+
+let array1 = [1, 2, 3];
+let array2 = [4, 5, 6];
+let array3 = array1.concat(array2);
+
+console.log(array3); // = [1, 2, 3, 4, 5, 6]; 
+console.log();
+
+
+// .join() - junta todos os elementos de um array (ou um array-like object) em uma string e retorna esta string. 
+// parametros (separador.) - especifica uma string para separar cada elemento adjacente do array. O separador é convertido em uma string se necessário. Se omitido, os elementos do array são separados com uma virgula (",").Se o separador for uma string vazia, todos os elementos sao juntados sem nenhum caracter entre eles
+
+let palavras = ['vou', 'juntar', 'tudo', 'isso'];
+
+console.log(palavras.join()); // sem parametro, separa com uma ","
+console.log(palavras.join('')); // junta tudo. 
+
+console.log(); 
+
+// toString(); - Para obejtos do tipo array, o metodo toString() concatena todos os valores em apenas uma string. 
+
+let names = ['Lucas', 'debora', 'pedro'];
+let namesNovos = names.toString();
+
+console.log(namesNovos);
