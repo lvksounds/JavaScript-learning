@@ -76,5 +76,8 @@ console.log("Via função normal:", elements.map(function(element){
 
 console.log("Via arrow function:" , elements.map(element => element.length));
 
+// Quando a única sentença em uma arrow function é `return`, podemos remover `return` e remover
+// as chaves envolvendo a sentença
+
 
 
