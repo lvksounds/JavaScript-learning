@@ -50,29 +50,31 @@ show();
 
 // Função Arrow ========================================
 // Uma expressão arrow function tem uma sintaxe curta e conecta seu valor lexicamente. 
+// Estas expressoes de funções são melhor aplicadas para funções que nao sejam métodos, e elas não podem ser usadas como construtoras
+
 /*
 ([param] [, param]) => {
     instruçoes
  }
  */
 
- //Função arrow 1 
-tri = (a) => {
-    return 3*a;
-}
-console.log(tri(4));
+// ex: 
+// funções mais curtas  
 
-//Função arrow 2 
-tri = a => 3*a;
-console.log(tri(4));
+var elements = [
+    'Hydrogen',
+    'Helium',
+    'Lithium',
+    'Beryllium'
+];
 
-let somaNumeros = (a,b) => {
-    return a + b;
-}
-console.log(somaNumeros(4,19));
+console.log("Via função normal:", elements.map(function(element){
+    return element.length
+}));
 
-somaNumeros = (a,b) => a + b;
-console.log(somaNumeros(4,19));
+// arrow 
+
+console.log("Via arrow function:" , elements.map(element => element.length));
 
 
 

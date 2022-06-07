@@ -154,3 +154,50 @@ let names = ['Lucas', 'debora', 'pedro'];
 let namesNovos = names.toString();
 
 console.log(namesNovos);
+console.log();
+
+
+// .map() - o metodo map é invocado a partir de um array e recebe como parametro uma função de callback, que é invocada para cada item e retorna o valor de item equivalente no array resultante. 
+// sintaxe = arrayOriginal.map(callback);
+
+// parametros: 'callback' é uma função que será executada para cada elemento no vetor original e retornará uma representação dele com base em alguma lógica, que será o item equivalente no vetor resultante. 
+
+// function(valorAtual, indice, array); 
+
+// O parâmetro valorAtual é obrigatório e representa o próprio item da iteração atual. Ou seja, à medida que a função map itera sobre o array, esse parâmetro receberá cada item.
+// O parâmetro indice é opcional e representa o índice do item da iteração atual.
+// O parâmetro array também é opicional e representa o próprio array ao qual os itens pertencem
+
+// ex: retornar um novo array com cada indice do array numbers ao quadrado
+
+var numbers = [1, 2, 3, 4, 5];
+
+var quadrado = numbers.map(function(item){
+    return Math.pow(item, 2);
+});
+
+console.log(`Array original: ${numbers}, array com a função map para passa-los ao quadrado: ${quadrado}`);
+console.log(); 
+
+// no exemplo a seguir mapeamos um array de objetos e retornamos apenas uma propriedade de cada item: 
+
+var vencedores = [
+    {
+        nome: "Equipe Super",
+        pais: "Brasil"
+    },
+    {
+        nome: "Time Maximo",
+        pais: "EUA"
+    },
+    {
+        nome: "Mega Grupo",
+        pais: "Canadá"
+    }
+];
+
+var podioPorPais = vencedores.map(function(item, indice){
+    return item.pais;
+});
+
+console.log(podioPorPais);
