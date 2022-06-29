@@ -18,4 +18,4 @@ let busca = (vetor, x) => {
     } return achou
 }
 
-console.log(busca(lista, num))
+console.log(busca(lista, num));
