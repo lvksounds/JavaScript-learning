@@ -20,4 +20,10 @@ let insertOrd = (x, array) => {
     let n = array.length; 
     let i = 0
     array[n+1] = x; // sentinela
+
+    while(array[i] < x){
+        if((i < n+1) && (array[i] != x) {
+            for(let j = n)
+        })
+    }
 }
