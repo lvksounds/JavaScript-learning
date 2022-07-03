@@ -1,0 +1,15 @@
+* Pilhas
+- Baseadas em LIFO: o ultimo elemento a ser inserido é o primeiro a ser retirado. 
+- Inserção e exclusão somente ocorrem em uma ponta da lista, o topo. 
+- Operação de inserção: push()
+- Operação de remoção: pop()
+- Um ponteiro é necessario para acessar a lista, que sempre aponta para o topo. 
+- Usada quando precisamos acessar o elemento mais recente adicionado
+
+* Filas
+- Baseadas em FIFO: o primeiro elemento a ser inseridp é tambem o primeiro a ser retirado. 
+- inserção e exclusão ocorrem nos dois lados da lista: inserção no final e exclusão no ínicio.
+- Operação de inserção: enqueue();
+- operação de remoção: dequeue(); 
+- dois ponteiros são necessarios: um aponta para o primeiro elemento e o outro, para o ultimo;
+- Usada quando precisamos acessar os elementos em ordem de chegada, ou prioridade. 
