@@ -4,17 +4,17 @@
 // Retorna true se o elemento for encontrado e false, caso contrario. 
 
 let lista = [1, 4, 5, 7, 8, 9, 10, 11, 13, 15, 20, 24, 28, 30, 31, 33];
-
+console.log(lista.length)
 let buscaLinear = (x, array) => {
     let i = 0;
     let bl1 = false; 
     let n = array.length;
 
     while(i <= n){
-        console.log(array[i])
+        console.log(i)
         if(array[i] === x){ // elemento encontrado
             bl1 = true;
-            i = n + 1;
+            i = n + 1; // joga i para o fim do array a fim de encerrar o loop
         } else {
             i += 1 // busca prossegue
         }
@@ -22,7 +22,7 @@ let buscaLinear = (x, array) => {
     return bl1
 }
 
-console.log(buscaLinear(12, lista));
+console.log(buscaLinear(15, lista));
 
 /*
 Analise de melhor e pior caso. 

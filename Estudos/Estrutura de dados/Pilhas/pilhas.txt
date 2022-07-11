@@ -1,0 +1,18 @@
+- Pilhas 
+
+- Uma das estruturas de dados mais simples e mais utilizadas em programação em que as inserções e remoções ocorrem em uma mesma extremidade. 
+
+- Idéia: Todo o acesso a seus elementos é feito a partir do topo. Quando um elemento novo é introduzido na pilha, ele passa a ser o elemento do topo e o único elemento que pode ser removido da pilha é o elemento do topo; 
+  - analogia com uma pilha de pratos
+
+- Os elementos da pilha so podem ser retirados na orde inversa a ordem em que foram introduzidos: o primeiro que sai é o ultimo que entrou (LIFO - Last In First Out). 
+
+- Em alocação sequencial utilizam-se vetores e uma variavel indica a posição do topo da pilha; 
+
+- Operações básicas: inserção e remoção dos elementos da pilha 
+- Situações extremas: pilha vazia e pilha cheia
+- Operações inválidas: 
+  - inserção em pilha cheia (overflow);
+  - remoção em pilha vazia (underflow);
+
+  

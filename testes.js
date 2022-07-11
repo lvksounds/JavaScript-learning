@@ -1,12 +1,3 @@
-function getRandomArbitrary(min, max) {
-    return Math.random() * (max - min) + min
-}
+var numero = 10;
 
-console.log(getRandomArbitrary(5, 10));
-
-
-function getRandom(){
-    return Math.random();
-}
-
-console.log(getRandom());
+console.log(numero == 11 ? "sim" : "nao");

@@ -44,7 +44,7 @@ let buscaBin = (x, array) => {
     return BB;
 }
 
-console.log(buscaBin(35, lista));
+console.log(buscaBin(33, lista));
 
 
 /* 
