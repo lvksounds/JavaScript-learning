@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Exercicios 1</title>
+  </head>
+  <style>
+    #ex1 {
+      width: 30rem;
+      padding: 2px;
+    }
+    #tarefa {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 2%;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    #soma,
+    #media {
+      padding: 2%;
+
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #media-resp,
+    #soma-resp {
+      border-bottom: 1px solid gray;
+      width: 40%;
+    }
+    #btn-media,
+    #btn-soma {
+      align-self: center;
+      height: 1.8rem;
+      width: 33%;
+    }
+  </style>
+  <body>
+    <div id="ex1">
+      <div id="tarefa">
+        <h3>Exercicio 2</h3>
+        <p>
+          Faça um programa que entre com cinco números e imprima o quadrado de
+          cada número:
+        </p>
+        Números - <input type="text" id="input1" />
+        <button id="btn1">adicionar</button>
+
+        <h4>Números</h4>
+        <p id="imprime-num"></p>
+
+        <div id="resp">
+          <h5>Quadrado dos números</h5>
+          <button id="btn-calc">Calular</button>
+          <p id="quad-resp"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="/jss/ex2.js"></script>
+  </body>
+</html>

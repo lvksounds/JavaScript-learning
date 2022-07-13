@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Exercicios 1</title>
+  </head>
+  <style>
+    #ex1 {
+      width: 30rem;
+      padding: 2px;
+    }
+    #tarefa {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 2%;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    #soma,
+    #media {
+      padding: 2%;
+
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #media-resp,
+    #soma-resp {
+      border-bottom: 1px solid gray;
+      width: 40%;
+    }
+    #btn-media,
+    #btn-soma {
+      align-self: center;
+      height: 1.8rem;
+      width: 33%;
+    }
+  </style>
+  <body>
+    <div id="ex1">
+      <div id="tarefa">
+        <h3>Exercicio 1</h3>
+        <p>Calcule a média de diversas notas digitadas pelo usuário:</p>
+        Notas - <input type="text" id="input1" />
+        <button id="btn1">enviar</button>
+
+        <h4>Litas de notas:</h4>
+        <p id="lista-notas"></p>
+
+        <div id="soma">
+          <h5>Soma:</h5>
+          <button id="btn-soma">Calular</button>
+          <p id="soma-resp"></p>
+        </div>
+
+        <div id="media">
+          <h5>Média:</h5>
+          <button id="btn-media">Calular</button>
+          <p id="media-resp"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="/jss/lista1.js"></script>
+  </body>
+</html>
