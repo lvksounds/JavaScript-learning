@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      section {
+        width: 33.75rem;
+        margin: 0 auto;
+      }
+
+      input {
+        scroll-behavior: unset;
+      }
+
+      #form {
+        display: flex;
+        flex-direction: column;
+      }
+      #btn-send {
+        margin: 10px;
+        align-self: center;
+      }
+      fieldset {
+        box-shadow: none;
+        padding: 12px;
+        display: flex;
+        flex-direction: row;
+      }
+
+      input {
+        margin: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <header>
+        <h3>Exercicio 5</h3>
+        <p>
+          Crie um programa que entre com os dados de altura e sexo de 5 pessoas.
+          Imprima na tela quantas pessoas são do sexo masculino e quantas
+          pessoas são do sexo feminino. Mostre também qual é a maior altura e se
+          essa altura é de um homem ou uma mulher.
+        </p>
+      </header>
+
+      <div id="form">
+        <form>
+          <fieldset>
+            <legend>Entrada de dados</legend>
+            <input type="text" placeholder="Sexo" id="genre-field" />
+            <input type="number" placeholder="Idade" id="age-field" />
+            <input type="number" placeholder="Altura em cm" id="height-field" />
+          </fieldset>
+        </form>
+        <button id="btn-send">Adicionar dados</button>
+      </div>
+      <p id="pessoasNum">Numero de pessoas:</p>
+      <hr />
+      <div>
+        <h4>Impressao dos dados</h4>
+        <button id="imprimeData">Imprimir dados</button>
+        <p id="impressao"></p>
+      </div>
+    </section>
+    <script src="/jss/ex5.js"></script>
+  </body>
+</html>
