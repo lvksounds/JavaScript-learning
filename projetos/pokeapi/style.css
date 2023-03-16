@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: azure;
+  padding: 2px;
+}
+
+.pokemon {
+  margin: 0.3rem;
+}
+
+.pokemon:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+#pokemons-names {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+}
