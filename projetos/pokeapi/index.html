@@ -6,20 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
   <body>
-    <div>
-      <h3>Pokedex</h3>
-    </div>
-
     <div class="container">
-      <div>
-        <h4>Pokemons list</h4>
-        <button id="get-data">Get PokemonsList</button>
+      <!---->
+      <div id="nav-bar">
+        <h3 id="nav-title">Pokedex</h3>
+
+        <ul id="nav-links">
+          <li>
+            <a href="#">home</a>
+          </li>
+          <li>
+            <a href="#"> profile </a>
+          </li>
+        </ul>
       </div>
 
-      <div id="names">
-        <ul id="pokemons-names"></ul>
+      <div id="search-box">
+        <!-- <h4>Pokemons list</h4> -->
+        <input
+          type="text"
+          placeholder="Pesquise por um pokemon"
+          id="search-input"
+        />
+        <button id="search-btn">
+          <span class="material-symbols-outlined"> search </span>
+        </button>
+      </div>
+
+      <div id="poke-card-container">
+        <h4>Pokemons</h4>
+        <ul id="poke-list"></ul>
       </div>
     </div>
   </body>

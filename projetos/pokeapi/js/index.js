@@ -1,37 +1,50 @@
 const getElement = (selector) => document.querySelector(selector);
 const getElements = (selector) => document.querySelectorAll(selector);
 
-const getBtn = document.getElementById("get-data");
-const pokemonList = document.getElementById("pokemons-list");
-let pokemonsList = [];
+const searchBtn = getElement("#search-btn");
+const pokesContainer = getElement("#poke-list");
+
+let pokesList = [];
+let pokesNamesList = [];
 let pokemonInfo = {};
 
-let pokemonsNameFetcher = async (url) => {
-  fetch(url)
-    .then((response) => response.json())
-    .then((json) => (pokemonsList = json.results));
-};
-
-let pokemonsInfoFetcher = (url) => {
-  fetch(url)
-    .then((response) => response.json())
-    .then((json) => (pokemonInfo = json));
-};
+// fetchs ao carregar a pagina;
 
 window.addEventListener("load", () => {
-  pokemonsNameFetcher("https://pokeapi.co/api/v2/pokemon");
+  //loadPokesCards();
+  loadPokesCards();
 });
+// let pokemonsNameFetcher = async (url) => {
+//   return await fetch(url)
+//     .then((response) => response.json())
+//     .then((json) => json.results);
+// };
 
-getBtn.addEventListener("click", (ev) => {
-  pokemonsList.forEach(
-    (pokemon) =>
-      (getElement("#pokemons-names").innerHTML += components.namesList(
-        pokemon.name
-      ))
-  );
-  getElements(".pokemon").forEach((poke) =>
-    poke.addEventListener("click", (ev) => {
-      pokemonsInfoFetcher(`https://pokeapi.co/api/v2/pokemon/${ev.target.id}`);
-    })
-  );
-});
+// let pokemonsInfoFetcher = async (url) => {
+//   return await fetch(url)
+//     .then((response) => response.json())
+//     .then((json) => json);
+// };
+
+let loadPokes = async () => {
+  const pokeData = [];
+  const pokeNames = await fetcher("https://pokeapi.co/api/v2/pokemon");
+  for (const pokemon of pokeNames.results) {
+    pokeData.push(await fetcher(pokemon.url));
+  }
+  return pokeData;
+};
+
+let fetcher = async (url) => {
+  return await fetch(url)
+    .then((res) => res.json())
+    .then((json) => json);
+};
+
+let loadPokesCards = async () => {
+  let pokes = await loadPokes();
+  console.log(pokes);
+  pokes.forEach((poke) => {
+    pokesContainer.innerHTML += components.poke_card(poke);
+  });
+};
