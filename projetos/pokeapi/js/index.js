@@ -11,20 +11,8 @@ let pokemonInfo = {};
 // fetchs ao carregar a pagina;
 
 window.addEventListener("load", () => {
-  //loadPokesCards();
   loadPokesCards();
 });
-// let pokemonsNameFetcher = async (url) => {
-//   return await fetch(url)
-//     .then((response) => response.json())
-//     .then((json) => json.results);
-// };
-
-// let pokemonsInfoFetcher = async (url) => {
-//   return await fetch(url)
-//     .then((response) => response.json())
-//     .then((json) => json);
-// };
 
 let loadPokes = async () => {
   const pokeData = [];
@@ -46,5 +34,21 @@ let loadPokesCards = async () => {
   console.log(pokes);
   pokes.forEach((poke) => {
     pokesContainer.innerHTML += components.poke_card(poke);
+    const modals = document.querySelectorAll("[data-modal]");
+    modals.forEach((element) => {
+      element.addEventListener("click", (event) => {
+        console.log(event.id);
+        event.preventDefault();
+        const modal = document.getElementById(element.dataset.modal);
+        modal.classList.add("open");
+        const exits = getElements(".modal-exit");
+        exits.forEach((exit) => {
+          exit.addEventListener("click", (ev) => {
+            ev.preventDefault();
+            modal.classList.remove("open");
+          });
+        });
+      });
+    });
   });
 };

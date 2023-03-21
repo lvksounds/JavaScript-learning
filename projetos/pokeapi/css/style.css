@@ -1,0 +1,151 @@
+:root {
+  --basefont: "Nunito", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--basefont);
+}
+
+html {
+  height: 100vh;
+}
+
+.container {
+  background-color: #ffffff;
+  background-image: url("../img/pokes/container_bg.png");
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  border-radius: 0.3rem;
+  text-align: center;
+}
+
+#nav-bar {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 0 10%;
+}
+
+#nav-title {
+  font-size: 28px;
+}
+
+#search-box {
+  background-color: #313131;
+  padding: 0 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 5px;
+  padding: 0.5rem;
+}
+
+#search-input {
+  width: 40%;
+  height: 25px;
+  border-radius: 2px;
+  border: none;
+  padding: 10px;
+}
+
+#search-btn {
+  background-color: #f5f5f5;
+  width: 50px;
+  height: 40px;
+  border: none;
+}
+
+#poke-card-container {
+  width: 60%;
+  margin: 0px auto;
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+#poke-card-container-title {
+  font-size: 24px;
+  padding: 10px;
+  background-color: #ffffff;
+  width: 30%;
+  margin: 0 auto;
+}
+
+#poke-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+}
+
+.poke-card {
+  margin: 0 auto;
+  width: 100%;
+  height: 12rem;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.poke-card:hover {
+  box-sizing: border-box;
+  animation: shake 0.2s;
+  cursor: pointer;
+  /* -webkit-box-shadow: 0px 1px 3px 4px rgba(26, 224, 11, 0.4);
+  -moz-box-shadow: 0px 1px 3px 4px rgba(26, 224, 11, 0.4);
+  box-shadow: 0px 1px 3px 4px rgba(26, 224, 11, 0.4); */
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+}
+
+.poke-img-box {
+  width: 100%;
+  height: 80%;
+  background-color: #f5f5f5;
+}
+
+.poke-img-1 {
+  width: 100%;
+  height: 100%;
+}
+
+.poke-desc-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.poke-name {
+  font-size: 18px;
+}
