@@ -40,3 +40,42 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+/* ------------------ pokemon details ------------------ */
+
+.poke-detaisl-container {
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid red; */
+}
+
+.poke-details-img {
+  width: 100%;
+}
+
+.status-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid blue; */
+  padding: 10px;
+  gap: 40px;
+}
+
+.poke-status {
+  display: grid;
+  /* border: 1px solid red; */
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  width: 100%;
+}
+
+#poke-details-title {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}

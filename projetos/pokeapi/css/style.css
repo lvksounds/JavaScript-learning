@@ -69,7 +69,7 @@ html {
 }
 
 #poke-card-container {
-  width: 60%;
+  width: 80%;
   margin: 0px auto;
   background-color: white;
   text-align: center;
@@ -123,9 +123,6 @@ html {
   20% {
     transform: translate(-3px, 0px) rotate(1deg);
   }
-  30% {
-    transform: translate(3px, 2px) rotate(0deg);
-  }
 }
 
 .poke-img-box {
@@ -148,4 +145,14 @@ html {
 
 .poke-name {
   font-size: 18px;
+}
+
+.details-btn {
+}
+
+.info-btn-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }

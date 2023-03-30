@@ -34,13 +34,16 @@ let loadPokesCards = async () => {
   console.log(pokes);
   pokes.forEach((poke) => {
     pokesContainer.innerHTML += components.poke_card(poke);
+
     const modals = document.querySelectorAll("[data-modal]");
     modals.forEach((element) => {
       element.addEventListener("click", (event) => {
-        console.log(event.id);
+        console.log(event.target.id);
         event.preventDefault();
         const modal = document.getElementById(element.dataset.modal);
         modal.classList.add("open");
+
+        //
         const exits = getElements(".modal-exit");
         exits.forEach((exit) => {
           exit.addEventListener("click", (ev) => {
@@ -48,7 +51,19 @@ let loadPokesCards = async () => {
             modal.classList.remove("open");
           });
         });
+        //
       });
+      //
     });
+    //
   });
+  //
+};
+
+//finalizar funçao que monta o modal
+
+let buildModal = () => {
+  const modalContainer = getElement(".modal-container");
+
+  modalContainer.innerHTML += components.pokeDetails();
 };
