@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Jost", sans-serif;
+  font-size: 28px;
+}
+html {
+  height: 100vh;
+}
+body {
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+h4 {
+  font-size: 60px;
+  color: #8b5cf6;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  width: 80%;
+  text-align: center;
+}
+#sub-titulo {
+  color: #b048ec;
+}
+#start {
+  color: #0f172a;
+  font-size: 26px;
+  border: none;
+  width: 100px;
+  background-color: white;
+}
+
+#start:hover {
+  border-bottom: 1px solid #0ea5e9;
+  box-shadow: 0px 34px 28px -30px rgba(14, 165, 233, 1);
+  cursor: pointer;
+}
+
+#contagem {
+  color: #38bdf8;
+}
+
+#resultado {
+  color: #ec4899;
+}
+
+.animation {
+  animation: resultUp;
+  animation-duration: 2s;
+}
+
+@keyframes resultUp {
+  from {
+    color: #fff;
+  }
+  to {
+    color: #ec4899;
+  }
+}
+
+#contagem,
+#resultado {
+  margin-top: 10px;
+  text-align: center;
+  height: 200px;
+}
+
+#numero-sorteado,
+#contagem-regressiva {
+  /* display: none; */
+  font-size: 80px;
+}
