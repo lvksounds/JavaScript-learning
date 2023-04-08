@@ -23,38 +23,39 @@ let components = {
     
   `,
 
-  pokeDetails: (poke) => `
+  pokeDetails: (poke) =>
+    `
     <div class="poke-detaisl-container">
-    <h3 id="poke-details-title">Bulbasaur</h3>
-    <div class="poke-details-img">
-      <img src="/img/pokes/1.png" alt="" class="poke-details-img" />
-    </div>
-    <div class="status-container">
-      <h4>Status</h4>
-      <div class="poke-status">
-        <div class="status">
-          <h5>Height</h5>
-          <p>0.7</p>
-        </div>
-        <div class="status">
-          <h5>Category</h5>
-          <p>seed</p>
-        </div>
-        <div class="status">
-          <h5>Weight</h5>
-          <p>seed</p>
-        </div>
-        <div class="status">
-          <h5>Abilities</h5>
-          <p>Overgrow</p>
-        </div>
-        <div class="status">
-          <h5>Type</h5>
-          <p>grass</p>
+      <div id="poke-details-title-div">
+        <h3 id="poke-details-title">${poke.name}</h3>
+      </div>
+      <div class="poke-details-img">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${
+          poke.id > 9 ? "0" + poke.id : "00" + poke.id
+        }.png" alt="" class="poke-details-img" />
+      </div>
+      <div class="status-container">
+        <h4>Status</h4>
+        <div class="poke-status">
+          <div class="status">
+            <h5>Height</h5>
+            <p>${poke.height}</p>
+          </div>
+          <div class="status">
+            <h5>Weight</h5>
+            <p>${poke.weight}</p>
+          </div>
+          <div class="status">
+            <h5>Main abilitie: </h5>
+            ${poke.abilities[0].ability.name}
+          </div>
+          <div class="status">
+            <h5>Type</h5>
+            ${poke.types[0].type.name}
+          </div>
         </div>
       </div>
-    </div>
+      
   </div>
-  
   `,
 };

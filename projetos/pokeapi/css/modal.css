@@ -23,6 +23,7 @@
   height: 100%;
 }
 .modal-container {
+  width: 15%;
   border-radius: 10px;
   background: #fff;
   position: relative;
@@ -45,12 +46,14 @@
 
 .poke-detaisl-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   /* border: 1px solid red; */
 }
 
 .poke-details-img {
-  width: 100%;
+  width: 200px;
 }
 
 .status-container {
@@ -68,14 +71,24 @@
   display: grid;
   /* border: 1px solid red; */
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
+  justify-content: center;
   width: 100%;
 }
 
 #poke-details-title {
-  position: absolute;
-  top: 10px;
-  left: 15px;
+  font-size: 1.8em;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#poke-details-title-div {
+  padding: 10px;
 }
